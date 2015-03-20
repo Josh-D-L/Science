@@ -39,7 +39,7 @@
 	<br>
 	<div id="table">
 		<input type="text" id="graphTitle" placeholder="Graph Title" style="text-align: center;">
-		<table>
+		<table id="dataTable">
 			<tr>
 				<th>X Values</th>
 				<th>Y Values</th>
@@ -60,10 +60,14 @@
 	</div>
 	<script>
 		function delRow() {
-			
+			if (document.getElementById("dataTable").children().length > 3) {
+				$('.container div:last-child').remove();
+			}
 		}
 		function newRow() {
-			
+			var $trLast = $('#tbl').find("tr:last"),
+			$trNew = $trLast.clone();
+			$trLast.after($trNew);
 		}
 		function submit() {
 			
