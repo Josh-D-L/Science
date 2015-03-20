@@ -63,7 +63,7 @@
 	<script>
 		function delRow() {
 			if ($('#dataTable').children().length > 3) {
-				$('.container div:last-child').remove();
+				$('#dataTable tr:last').remove();
 			}
 		}
 		function newRow() {
