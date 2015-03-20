@@ -40,20 +40,18 @@
 	<div id="table">
 		<input type="text" id="graphTitle" placeholder="Graph Title" style="text-align: center;">
 		<table id="dataTable">
-			<tbody>
-				<tr>
-					<th>X Values</th>
-					<th>Y Values</th>
-				</tr>
-				<tr>
-					<td><input type="text" id="xLabel" placeholder="X Label"></td>
-					<td><input type="text" id="yLabel" placeholder="Y Label"></td>
-				</tr>
-				<tr>
-					<td><input type="number" class="xVal"></td>
-					<td><input type="number" class="yVal"></td>
-				</tr>
-			</tbody>
+			<tr>
+				<th>X Values</th>
+				<th>Y Values</th>
+			</tr>
+			<tr>
+				<td><input type="text" id="xLabel" placeholder="X Label"></td>
+				<td><input type="text" id="yLabel" placeholder="Y Label"></td>
+			</tr>
+			<tr>
+				<td><input type="number" class="xVal"></td>
+				<td><input type="number" class="yVal"></td>
+			</tr>
 		</table>
 		<br>
 		<button type="button" onclick="newRow()">Add another row</button>
@@ -62,12 +60,12 @@
 	</div>
 	<script>
 		function delRow() {
-			if ($('#dataTable').children().length > 3) {
+			if ($('#dataTable tr').length > 3) {
 				$('#dataTable tr:last').remove();
 			}
 		}
 		function newRow() {
-			var $tableBody = $('#dataTable').find("tbody"),
+			var $trLast = $('#dataTable').find("tr:last"),
 			$trLast = $tableBody.find("tr:last"),
 			$trNew = $trLast.clone();
 			$trLast.after($trNew);
