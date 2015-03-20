@@ -67,6 +67,7 @@
 			}
 		}
 		function newRow() {
+			var $tableBody = $('#dataTable').find("tbody"),
 			$trLast = $tableBody.find("tr:last"),
 			$trNew = $trLast.clone();
 			$trLast.after($trNew);
