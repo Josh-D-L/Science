@@ -38,18 +38,15 @@
 	<canvas id="diagram" width="500" height="500" style="border:1px solid #000000;" title="Diagram">Your browswer does not support canvas.</canvas>
 	<br>
 	<div id="table">
+		<input type="text" id="graphTitle" placeholder="Graph Title" style="text-align:center">
 		<table>
 			<tr>
 				<th>X Values</th>
 				<th>Y Values</th>
 			</tr>
 			<tr>
-				<td><input type="number" class="xVal"></td>
-				<td><input type="number" class="yVal"></td>
-			</tr>
-			<tr>
-				<td><input type="number" class="xVal"></td>
-				<td><input type="number" class="yVal"></td>
+				<td><input type="text" id="xLabel" placeholder="X Label"></td>
+				<td><input type="text" id="yLabel" placeholder="Y Label"></td>
 			</tr>
 			<tr>
 				<td><input type="number" class="xVal"></td>
@@ -58,9 +55,13 @@
 		</table>
 		<br>
 		<button type="button" onclick="newRow()">Add another row</button>
+		<button type="button" onclick="delRow()">Remove last row</button>
 		<button type="button" onclick="submit()">Submit</button>
 	</div>
 	<script>
+		function delRow() {
+			
+		}
 		function newRow() {
 			
 		}
